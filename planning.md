@@ -134,6 +134,13 @@ For each tool, describe the specific failure mode you're handling and what the a
 
 Write out what a full user interaction looks like from start to finish — tool call by tool call. Use a specific example query.
 
+FitFindr is an AI agent that help users search and recommend a fit based on what the user is looking for. The agent will tun through three sequences:
+1. Search_listings : will search available wardrobe on the database based on users criteria such as categroy, price, brand, etc
+2. Suggest_fit : will match the availability with user's current wardrobe and recommend a fit
+3. crete_fit_card : lastly the agent will geneerate a short description of the new outfit.
+
+It will return the closest match to what the user is looking for and  return a close loop message when there is no availability. If search_listings equal to 0 then the loop stopped.
+
 **Example user query:** "I'm looking for a vintage graphic tee under $30. I mostly wear baggy jeans and chunky sneakers. What's out there and how would I style it?"
 
 **Step 1:**
